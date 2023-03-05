@@ -1,0 +1,101 @@
+
+<script>
+    /*JOSON
+    //Json standns for java object notation
+    //Json also called as java scripts objects
+    //we can exchange the data in full stack application in two ways
+     1.xml
+     2.json
+     XML Is heavy weight
+     JSON Is Light Weight
+     JSON Data Suggested While Transferring the Data
+     Syntax:
+     **********
+     array ------------[],
+     object------------ {}
+    */
+    //Duplicate Keys are not allowed whereas duplcate values are allowed
+    //For String we can use the . Notation whereas other than string we will use squire[] notation
+    
+let student={
+    "stdName":"Nandyala Sudharshan",
+    "stdLocation":"Hyderabad",
+    "stdGroup":"MPC"
+}
+console.log(student);
+//Ways Of Accessing Objects
+console.log(student.stdName,student.stdLocation,student.stdGroup);
+console.log(student["stdName"],student["stdLocation"],student["stdGroup"]);
+//Object Destructuring
+const{stdName,stdLocation,stdGroup}=student;
+console.log(stdName,stdLocation,stdGroup);
+
+let myson_fuction={
+    "money":{"amount":1000},
+    "gold":{"weight":"2Gr"},
+    "book":{"company1":"ReactJS"},
+    "pen":{"comapany2":"Elkos Better"}
+}
+console.log(myson_fuction);
+let{money,gold,book,pen}=myson_fuction;
+let{amount}=money;
+let{weight}=gold;
+let{company1}=book;
+let{comapany2}=pen;
+console.log(amount,weight,company1,comapany2);
+
+let employees=[
+    {
+        "empId":1001,
+        "empName":"Sudharshan",
+        "empSalary":50000,
+        "empLocaiton":"Hyderabad"
+    },
+    {
+        "empId":1002,
+        "empName":"Naveen",
+        "empSalary":90000,
+        "empLocaiton":"Hyderabad"
+    },
+    {
+        "empId":1003,
+        "empName":"Bharath",
+        "empSalary":70000,
+        "empLocaiton":"Hyderabad"
+    },
+    {
+        "empId":1004,
+        "empName":"Laskmi Reddy",
+        "empSalary":100000,
+        "empLocaiton":"Hyderabad"
+    },
+    {
+        "empId":1001,
+        "empName":"Sudharshan",
+        "empSalary":50000,
+        "empLocaiton":"Hyderabad"
+    }
+];
+document.write(`
+<table border="1
+       cellpadding="10px"
+       cellspacing="10px"
+       align="center">
+       <tr>
+        <th>Employee ID </th>
+        <th>Employee Name</th>
+        <th>Employee Salary</th>
+        <th>Employee Location</th>
+       </tr>
+`);
+employees.forEach(employee=>{
+    document.write(`
+    <tr>
+        <td>${employee.empId}</td>
+        <td>${employee.empName}</td>
+        <td>${employee.empSalary}</td>
+        <td>${employee.empLocaiton}</td>
+    </tr>
+    `)
+})
+</script>

@@ -1,0 +1,70 @@
+<script>
+    function welcomeMessage(userName){
+        return "Welcome To Hyderabad Mr."+userName;
+    }
+    //let message=welcomeMessage();
+   console.log(welcomeMessage("Nandyala"));
+   function loginCheck(userName,userPwd){
+    if(userName=='Sudharshan' && userPwd=="yadav123"){
+        return "Valid Credentials";
+    }
+    else{
+        return "Invalid Credentials";
+    }
+   }
+   console.log(loginCheck("Sudharshan","yadav123"));
+   console.log(loginCheck("nandyala","123"));
+   function multipleParamFunction(name1,name2,name3){
+    console.log(name1,name2,name3);
+   }
+   multipleParamFunction("Adimulam","Pavani","Yadav");
+   multipleParamFunction("Nandyala","Sharada","Yadava");
+   multipleParamFunction("Nandyala","Sudharshan","Yadav");
+   multipleParamFunction();
+   multipleParamFunction(null,null,null);
+   let employee={
+    empid:101,
+    empName:'Sudharshan',
+    empLocation:'Hyderabad'
+   }
+   for(let key in employee){
+    console.log(employee[key]);
+   }
+   
+//Storing List Of Employees Objects Into Employees Aarry Object
+const employees=[
+    {
+    firstName:"Nandyala",
+    lastName:"Sudharshan",
+    location:"Hyderabad",
+    pincode:516162
+    },
+    {
+        firstName:"Adimulam",
+        lastName:"Pavani",
+        location:"Hyderabad",
+        pincode:516134
+    },
+    {
+        firstName:"Mamilla",
+        lastName:"Narendra",
+        location:"Bangalore",
+        pincode:916162
+    }
+]
+for(let key in employees){
+    console.log(employees[key]);
+   }
+</script>
+<dev>
+    <form>
+        Username:<br>
+        <input type="text" name="username">
+        <br>
+        PassWord:<br>
+        <input type="password" name="PassWord">
+        <br><br>
+        <input type="submit" onclick="loginCheck(username,PassWord)" value="Submit">
+      </form>
+</dev>
+

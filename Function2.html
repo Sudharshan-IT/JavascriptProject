@@ -1,0 +1,32 @@
+<script>
+    /*Rest Parameter Function
+    *It is used to store more than one value in single argument
+    * "..." operator called as Spread Operator
+    * It is introduced in the ES6
+    * We can only have one rest operator per function
+    * The Occurance of Rest Parameter should be last
+    * The Default value of Rest Parameter is An Empty Array[]
+    * 
+    */
+   function greet(...wishMessage){
+       console.log(wishMessage);
+   };
+   greet();
+   greet("Good Afternoon","Good Morning","Good Evening");
+   function getNames(name,...names){ 
+    console.log(name,names);
+   }
+   getNames("sudharshan","yadav","nandyala","NTR");
+
+   /*
+   Default Function
+   ***************************************************
+   - While Defining The Functions we will assign some default values to parameter
+   - This Concept is introduced in the ES6
+
+   */
+  function getMovies(movie1="RRR",movie2="Simhadri",movie3="Yamadonga",movie4="StudentNo1"){
+    console.log(movie1,movie2,movie3,movie4);
+  }
+  getMovies();
+</script>
