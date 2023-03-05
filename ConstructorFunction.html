@@ -1,0 +1,83 @@
+<script>
+    /*********Constructor Function*****
+     * This Function is usued to create the classes like structures before ES 6
+     * In Constructor Function (Variable and Functions) should start with this keyword
+     * this keyword represents current class members
+     * we will create objects with help of new keywords
+    */
+    function Department(){
+        this.depId=1001;
+        this.depName="EEE";
+        this.depLocation="Kadapa";
+    };
+    let dep1=new Department();
+    console.log(
+        dep1.depId,
+        dep1.depName,
+        dep1.depLocation);
+    let dep2=new Department();
+    console.log(
+        dep1.depId,
+        dep1.depName,
+        dep1.depLocation);
+    function Welcome(){
+        this.message="Good Morning";
+        this.welcomeMessage=function(){
+            return `${this.message} MR.Sudharshan`;
+        }
+    }
+    let wel=new Welcome();
+    console.log(wel.welcomeMessage());
+    function Employee(){
+    this.empId=101;
+    this.empName="Sudharshan";
+    this.empLocation="Hyderbad";
+    this.empSalary=40000;
+    this.getEmployeeId=function(){
+        return this.empId;
+    }
+    this.getEmployeeName=function(){
+        return this.empName;
+    }
+    this.getEmployeeLocation=function(){
+        return this.empLocation;
+    }
+    this.getEmployeeSalary=function(){
+        return this.empSalary;
+    }
+    };
+    let emp=new Employee();
+    console.log(
+        emp.getEmployeeId(),
+        emp.getEmployeeName(),
+        emp.getEmployeeLocation(),
+        emp.getEmployeeSalary()
+    );
+    function Student(stdId,stdName,stdLocation,stdBranch){
+        this.stdId=stdId;
+        this.stdName=stdName;
+        this.stdLocation=stdLocation;
+        this.stdBranch=stdBranch;
+    }
+    let student1=new Student(101,"Sudharshan","Kadapa","EEE");
+    let student2=new Student(102,"Laksmi Reddy","Kadapa","Civil");
+    let student3=new Student(103,"Narendra","Kadapa","ECE");
+    console.log(
+    student1.stdBranch,
+    student1.stdBranch,
+    student1.stdLocation,
+    student1.stdBranch
+    );
+    console.log(
+    student2.stdBranch,
+    student2.stdBranch,
+    student2.stdLocation,
+    student2.stdBranch
+    );
+    console.log(
+    student3.stdBranch,
+    student3.stdBranch,
+    student3.stdLocation,
+    student3.stdBranch
+    );
+</script>
