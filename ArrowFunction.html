@@ -1,0 +1,62 @@
+<script>
+    /*
+    Arrow Function or Anonymous Function
+    ************************************************************
+    The Function without name is called anonymous function
+    Anonymous Funcion also called as Arrow function
+    we will represent the Arrow Function with "=>"
+    Arrow Function is Introduced in the ES6
+    Arrow Function Behaves Like Call Back Function
+
+    Syntax
+    ****************
+    1.Function Defination
+    2.Function Calling
+    var/let/const variableName=(arg1,arg2,arg3....argn)=>{
+     //Business Logic
+    }
+
+    */
+    let heroNames=(name1,name2,name3,name4)=>{
+        console.log(name1,name2,name3,name4);
+
+    }
+    heroNames("Sudharshan","Lakshmi Reddy","Narendra","Hari Naik");
+    heroNames();
+    heroNames(null,null,null,null);
+    let movieNames=(name1,name2,name3)=>{
+    console.log(name1(),name2(),name3());
+    }
+    movieNames(
+        ()=>{
+            return "Gajini";
+        },
+        ()=>{
+            return "Yamudu";
+        },
+        ()=>{
+            return "Singham";
+        }
+    );
+    let initialize=(user,getElementsByEmail,getElementsById)=>{
+    console.log(user,getElementsByEmail(),getElementsById());
+    };
+    let getElementsByEmail=()=>{
+        return "nandyala505@gmail.com";
+    };
+    let getElementsById=()=>{
+        return "606316";
+    };
+    initialize("Sudharshan",getElementsByEmail,getElementsById);
+    let arr=[];
+    for(let i=0;i<5;i++){
+    arr.push(()=>{
+        return "Hello";
+    });
+    console.log(arr[i]());
+    }
+    for(let j=0;j<arr.length;j++){
+        console.log(arr[j]());
+    }
+
+</script>
